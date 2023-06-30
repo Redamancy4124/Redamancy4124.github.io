@@ -574,7 +574,7 @@
   </entry>
   <entry>
     <title>面试题：react、vue中的key有什么作用？（key的内部原理）</title>
-    <url>/2023/05/04/%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Areact%E3%80%81vue%E4%B8%AD%E7%9A%84key%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F%EF%BC%88key%E7%9A%84%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86%EF%BC%89/</url>
+    <url>/2022/05/04/%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Areact%E3%80%81vue%E4%B8%AD%E7%9A%84key%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F%EF%BC%88key%E7%9A%84%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86%EF%BC%89/</url>
     <content><![CDATA[<h2 id="面试题：react、vue中的key有什么作用？（key的内部原理）"><a href="#面试题：react、vue中的key有什么作用？（key的内部原理）" class="headerlink" title="面试题：react、vue中的key有什么作用？（key的内部原理）"></a>面试题：react、vue中的key有什么作用？（key的内部原理）</h2><h5 id="1-虚拟DOM中key的作用："><a href="#1-虚拟DOM中key的作用：" class="headerlink" title="1.虚拟DOM中key的作用："></a>1.虚拟DOM中key的作用：</h5><p>变化时，Vue会根据【新数据】生成【新的虚拟DOM】,<br>随后Vue进行【新虚拟DOM】与【旧虚拟DOM】的差异比较，比较规则如下：</p>
 <h5 id="2-对比规则："><a href="#2-对比规则：" class="headerlink" title="2.对比规则："></a>2.对比规则：</h5><h6 id="1-旧虚拟DOM中找到了与新虚拟DOM相同的key："><a href="#1-旧虚拟DOM中找到了与新虚拟DOM相同的key：" class="headerlink" title="(1).旧虚拟DOM中找到了与新虚拟DOM相同的key："></a>(1).旧虚拟DOM中找到了与新虚拟DOM相同的key：</h6><p>​                           ①.若虚拟DOM中内容没变, 直接使用之前的真实DOM！<br>​                           ②.若虚拟DOM中内容变了, 则生成新的真实DOM，随后替换掉页面中之前的真实DOM。</p>
 <h6 id="2-旧虚拟DOM中未找到与新虚拟DOM相同的key"><a href="#2-旧虚拟DOM中未找到与新虚拟DOM相同的key" class="headerlink" title="(2).旧虚拟DOM中未找到与新虚拟DOM相同的key"></a>(2).旧虚拟DOM中未找到与新虚拟DOM相同的key</h6><p>​                             创建新的真实DOM，随后渲染到到页面。<br>​                                                </p>
